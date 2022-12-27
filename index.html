@@ -7,163 +7,67 @@
     <title>Calculator</title>
     <link rel="icon" href="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/256x256/calculator.png">
     <link rel="stylesheet" href="./calc.css">
-    <script src="./calc.js"></script>
+    <script src="./calc1.js"></script>
 </head>
 <body>
-    <div id="heading">
-        <h1>Calculator</h1>
-    </div>
-    <div id="main_container">
-        <div id="display_container">
-            <p id="display"></p>
-            <div id="value_container">
-                <p id="value"></p>
-            </div>
-            <div id="result_container">
-                <p id="result"></p>
-            </div>
+    <div id="calc_div">
+        <div id="heading">
+            <h1>Calculator</h1>
         </div>
-        
-        <div id="buttons_container">
-           <!-- ------- first row ------------ -->
+        <div id="main_container">
+            <div id="display_container">
+                <p id="display"></p>
+                <div id="value_container">
+                    <p id="value"></p>
+                </div>
+                <div id="result_container">
+                    <p id="result"></p>
+                </div>
+            </div>
+            
+            <div id="buttons_container">
+            <!-- ------- first row ------------ -->
 
-           <button onclick="numValue('AC')" class="button_div button_gray"> 
-                <span class="special_char" id="AC">AC</span>
-                <!-- <div class="button_div button_gray">
-                    <span class="special_char">AC</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('negitive')" class="button_div button_gray"> 
-                <span class="special_char special_char_font" id="negitive">+/-</span>
-                <!-- <div class="button_div button_gray">
-                    <span class="special_char special_char_font">+/-</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('modDiv')" class="button_div button_gray">
-                <span class="special_char special_char_font" id="modDiv">%</span>
-                <!-- <div class="button_div button_gray">
-                    <span class="special_char special_char_font">%</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('divide')" class="button_div button_yellow">
-                <span class="special_char operaters_font" id="divide">&divide;</span>
-                <!-- <div class="button_div button_yellow">
-                    <span class="special_char operaters_font">&divide;</span>
-                </div> -->
-            </button>
+            <button onclick="numValue('AC')" class="button_div button_red" id="AC" value="AC">AC</button>
+                <button onclick="numValue('DEL')" class="button_div button_red" id="DEL" value="DEL"> DEL</button>
+                <button onclick="numValue('modDiv')" class="button_div button_yellow" id="modDiv" value="%">%</button>
+                <button onclick="numValue('divide')" class="button_div button_yellow" id="divide" value="/">&divide;</button>
+                <!-- ------- Second row ------------ --> 
 
-            <!-- ------- Second row ------------ --> 
+                <button class="button_div" onclick="numValue('seven')" id="seven" value="7">7</button>
+                <button onclick="numValue('eight')" class="button_div" id="eight" value="8">8</button>
+                <button onclick="numValue('nine')" class="button_div" id="nine" value="9">9</button>
+                <button onclick="numValue('cross')" class="button_div button_yellow" id="cross" value="*">&Cross;</button>
 
-            <button class="button_div" onclick="numValue('seven')">
-                <span class="numbers" id="seven">7</span>
-                 <!-- <div class="button_div">
-                    <span class="numbers">7</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('eight')" class="button_div">
-                <span class="numbers" id="eight">8</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">8</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('nine')" class="button_div">
-                <span class="numbers" id="nine">9</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">9</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('cross')" class="button_div button_yellow">
-                <span class="special_char operaters_font cross_font" id="cross">&Cross;</span>
-                <!-- <div class="button_div button_yellow">
-                    <span class="special_char operaters_font cross_font">&Cross;</span>
-                </div> -->
-            </button>
+                <!-- ------- Third row ------------ -->
 
-            <!-- ------- Third row ------------ -->
+                <button onclick="numValue('four')" class="button_div" id="four" value="4"> 4</button>
+                <button onclick="numValue('five')" class="button_div" id="five" value="5">5</button>
+                <button onclick="numValue('six')" class="button_div" id="six" value="6">6</button>
+                <button onclick="numValue('minus')" class="button_div button_yellow" id="minus" value="-">&minus;</button>
 
-            <button onclick="numValue('four')" class="button_div" > 
-                <span class="numbers" id="four">4</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">4</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('five')" class="button_div">
-                <span class="numbers" id="five">5</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">5</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('six')" class="button_div">
-                <span class="numbers" id="six">6</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">6</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('minus')" class="button_div button_yellow">
-                <span class="special_char operaters_font" id="minus">&minus;</span>
-                <!-- <div class="button_div button_yellow">
-                    <span class="special_char operaters_font">&minus;</span>
-                </div> -->
-            </button>
+                <!-- ------- fourth row ------------ -->
 
-            <!-- ------- fourth row ------------ -->
+                <button onclick="numValue('one')"  class="button_div" id="one" value="1">1</button>
+                <button onclick="numValue('two')"  class="button_div" id="two" value="2">2 </button>
+                <button onclick="numValue('three')"  class="button_div" id="three" value="3">3</button>
+                <button onclick="numValue('plus')"  class="button_div button_yellow" id="plus" value="+">&plus;</button>
 
-            <button onclick="numValue('one')"  class="button_div">
-                <span class="numbers" id="one">1</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">1</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('two')"  class="button_div">
-                <span class="numbers" id="two">2</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">2</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('three')"  class="button_div">
-                <span class="numbers" id="three">3</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">3</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('plus')"  class="button_div button_yellow">
-                <span class="special_char operaters_font" id="plus">&plus;</span>
-                <!-- <div class="button_div button_yellow">
-                    <span class="special_char operaters_font">&plus;</span>
-                </div> -->
-            </button>
+                <!-- ------- Fifth row ------------ -->
 
-            <!-- ------- Fifth row ------------ -->
-
-            <button onclick="numValue('zero')"  class="button_div">
-                <span class="numbers" id="zero">0</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">0</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('minus')"  class="button_div">
-                <span class="numbers">?</span>
-                <!-- <div class="button_div">
-                    <span class="numbers">?</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('dot')"  class="button_div">
-                <span class="numbers dot_font" id="dot">.</span>
-                <!-- <div class="button_div">
-                    <span class="numbers dot_font">&dot;</span>
-                </div> -->
-            </button>
-            <button onclick="numValue('equals')"  class="button_div button_yellow">
-                <span class="special_char operaters_font" id="equals">&equals;</span>
-                <!-- <div class="button_div button_yellow">
-                    <span class="special_char operaters_font">&equals;</span>
-                </div> -->
-            </button>
+                <button onclick="numValue('zero')"  class="button_div zero_div" id="zero" value="0">0</button>
+                <button onclick="numValue('dot')"  class="button_div dot_div" id="dot" value=".">.</button>
+                <button onclick="numValue('equals')"  class="button_div button_yellow" id="equals" value="=">&equals;</button>
+            </div>
         </div>
     </div>
     <div id="DarkMode">
-        <button id="dark_button" onclick="dark()">Dark</button>
-        <button id="light_button" onclick="light()">Light</button>
+        <div id="heading" class="heading">
+            <h1>Light & Dark Mode</h1>
+        </div>
+        <div id="mode_button">
+            <button id="dark_button" onclick="dark()">Light/Dark</button>
+        </div>
     </div>
 </body>
 </html>
