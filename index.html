@@ -10,11 +10,15 @@
     <script src="./calc1.js"></script>
 </head>
 <body>
-    <div id="calc_div">
-        <div id="heading">
+    <div id="heading">
             <h1>Calculator</h1>
         </div>
-        <div id="main_container">
+    <div id="calc_div">
+        <!-- <div id="heading">
+            <h1>Calculator</h1>
+        </div> -->
+        <div id="main_container" class=".dark_main"> 
+            <button id="dark_button" onclick="dark()">Light/Dark</button>
             <div id="display_container">
                 <p id="display"></p>
                 <div id="value_container">
@@ -27,47 +31,47 @@
             
             <div id="buttons_container">
             <!-- ------- first row ------------ -->
-
-            <button onclick="numValue('AC')" class="button_div button_red" id="AC" value="AC">AC</button>
-                <button onclick="numValue('DEL')" class="button_div button_red" id="DEL" value="DEL"> DEL</button>
-                <button onclick="numValue('modDiv')" class="button_div button_yellow" id="modDiv" value="%">%</button>
-                <button onclick="numValue('divide')" class="button_div button_yellow" id="divide" value="/">&divide;</button>
-                <!-- ------- Second row ------------ --> 
-
-                <button class="button_div" onclick="numValue('seven')" id="seven" value="7">7</button>
-                <button onclick="numValue('eight')" class="button_div" id="eight" value="8">8</button>
-                <button onclick="numValue('nine')" class="button_div" id="nine" value="9">9</button>
-                <button onclick="numValue('cross')" class="button_div button_yellow" id="cross" value="*">&Cross;</button>
-
+                <div >
+                    <button onclick="numValue('AC')" class="button_div button_red" id="AC" value="AC">AC</button>
+                    <button class="button_div" onclick="numValue('seven')" id="seven" value="7">7</button>
+                    <button onclick="numValue('four')" class="button_div" id="four" value="4"> 4</button>
+                    <button onclick="numValue('one')"  class="button_div" id="one" value="1">1</button>
+                    <!-- <button onclick="numValue('zero')"  class="button_div zero_div" id="zero" value="0">0</button> -->
+                    <button onclick="numValue('zero')"  class="button_div " id="zero" value="0">0</button>
+                </div>
+                 <!-- ------- Second row ------------ --> 
+                <div >
+                    <button onclick="numValue('DEL')" class="button_div button_red" id="DEL" value="DEL"> DEL</button>
+                    <button onclick="numValue('eight')" class="button_div" id="eight" value="8">8</button>
+                    <button onclick="numValue('five')" class="button_div" id="five" value="5">5</button>
+                    <button onclick="numValue('two')"  class="button_div" id="two" value="2">2 </button>
+                </div>
                 <!-- ------- Third row ------------ -->
-
-                <button onclick="numValue('four')" class="button_div" id="four" value="4"> 4</button>
-                <button onclick="numValue('five')" class="button_div" id="five" value="5">5</button>
-                <button onclick="numValue('six')" class="button_div" id="six" value="6">6</button>
-                <button onclick="numValue('minus')" class="button_div button_yellow" id="minus" value="-">&minus;</button>
-
+                <div >
+                    <button onclick="numValue('modDiv')" class="button_div button_yellow" id="modDiv" value="%">%</button>
+                    <button onclick="numValue('nine')" class="button_div" id="nine" value="9">9</button>
+                    <button onclick="numValue('three')"  class="button_div" id="three" value="3">3</button>
+                    <button onclick="numValue('six')" class="button_div" id="six" value="6">6</button>
+                    <button onclick="numValue('dot')"  class="button_div dot_div" id="dot" value=".">.</button>
+                </div>
                 <!-- ------- fourth row ------------ -->
-
-                <button onclick="numValue('one')"  class="button_div" id="one" value="1">1</button>
-                <button onclick="numValue('two')"  class="button_div" id="two" value="2">2 </button>
-                <button onclick="numValue('three')"  class="button_div" id="three" value="3">3</button>
-                <button onclick="numValue('plus')"  class="button_div button_yellow" id="plus" value="+">&plus;</button>
-
-                <!-- ------- Fifth row ------------ -->
-
-                <button onclick="numValue('zero')"  class="button_div zero_div" id="zero" value="0">0</button>
-                <button onclick="numValue('dot')"  class="button_div dot_div" id="dot" value=".">.</button>
-                <button onclick="numValue('equals')"  class="button_div button_yellow" id="equals" value="=">&equals;</button>
+                <div >
+                    <button onclick="numValue('divide')" class="button_div button_yellow" id="divide" value="/">&divide;</button>
+                    <button onclick="numValue('cross')" class="button_div button_yellow" id="cross" value="*">&Cross;</button>
+                    <button onclick="numValue('plus')"  class="button_div button_yellow" id="plus" value="+">&plus;</button>
+                    <button onclick="numValue('minus')" class="button_div button_yellow" id="minus" value="-">&minus;</button>
+                    <button onclick="numValue('equals')"  class="button_div button_yellow" id="equals" value="=">&equals;</button>
+                </div>
             </div>
         </div>
     </div>
-    <div id="DarkMode">
+    <!-- <div id="DarkMode">
         <div id="heading" class="heading">
             <h1>Light & Dark Mode</h1>
         </div>
         <div id="mode_button">
             <button id="dark_button" onclick="dark()">Light/Dark</button>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
